@@ -1,102 +1,24 @@
-let arr = ["Amir", "Farrux", "Sunnat", "Rahim", "Maksim",];
-console.log(arr);
+let arr = ['morgen', 'nikolay', 'alexander', 'yulduz', 'timati'];
+let longestName = arr[0]
+let max = arr.sort((a,b) => b.length - a.length)[0]
 
-
-
-//первая задача
-let index = +prompt("Какой индекс?").trim();
-console.log(index);
-if (index === "" || isNaN(index)) {
-	alert("Введите индекс")
-}else if (index > arr.length - 1) {
-	alert("Нет никого под этим индексом")
-}else {
-	let ques = confirm(`Под индексом ${index}, ${arr[index]}. Хотите удалить ?`)
-	if (ques === true) {
-		alert(`${arr[index]} успешно удален`)
-		let spl = arr.splice(index, 1);
-		console.log(spl);
-	} else {
-		alert("Массив не изменился")
+arr.forEach((name) => {
+	if (longestName > name) {
+		longestName = name
 	}
-}
-
-
-//вторая задача
-let nameSearch = prompt("Напишите имя которое хотите удалить").trim();
-if (nameSearch === "") {
-	alert("Вы ничего не ввели")
-}else if(!arr.includes(nameSearch[0].toUpperCase() + nameSearch.slice(1).toLowerCase())) {
-	alert("Нет такого имени в массиве")
-}else {
-	nameSearch = nameSearch[0].toUpperCase() + nameSearch.slice(1).toLowerCase()
-	let searchIdx = arr.indexOf(nameSearch);
-	let ask = confirm(` ${nameSearch} найден. Хотите удалить из массива ?`)
-	if (ask === true) {
-		let del = arr.splice(searchIdx, 1)
-		alert(`${nameSearch} успешно удален из массива`)
-		console.log(del);
-	} else {
-		alert("Массив не изменился")
-	}
-}
-console.log(arr);
-
-
-//Третья задача
-let num = [
-	[
-		{
-			a:{
-				price:20
-			}
-		}
-	],
-	[
-		{
-			a:{
-				price:44
-			}
-		}
-	],
-	[
-		{
-			a:{
-				price: 35
-			}
-		}
-	],
-	
-];
-
-let total = 0;
-//total = num[0][0].a.price + num[1][0].a.price + num[2][0].a.price
-
-num.forEach(item => {
-	total += item[0].a.price
 })
-console.log(total);
+console.log(longestName);
+console.log(max);
 
 
+let numbers = [2,4,1,4,7,3,2,7,9,3,2]
+let even = [] // четные  
+let odd = [] // не четные
+numbers.forEach((num) => num % 2 === 0 ? even.push(num) : odd.push(num));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(even);
+console.log(odd);
 
 
 
@@ -258,3 +180,108 @@ console.log(total);
 
 //let students = [1,2,3,'Farrux', true, 'Hello', ['guys', 'my', 11], true, 'name is', [[0,'years old',0,'and I am']]];
 //console.log(`${students[5]} ${students[6][0]} ${students[6][1]} ${students[8]} ${students[3]} ${students[9][0][3]} ${students[6][2]} ${students[9][0][1]}`);
+
+
+
+
+
+//let arr = ["Amir", "Farrux", "Sunnat", "Rahim", "Maksim",];
+//console.log(arr);
+
+////первая задача
+//let index = +prompt("Какой индекс?").trim();
+//console.log(index);
+//if (index === "" || isNaN(index)) {
+//	alert("Введите индекс")
+//}else if (index > arr.length - 1) {
+//	alert("Нет никого под этим индексом")
+//}else {
+//	let ques = confirm(`Под индексом ${index}, ${arr[index]}. Хотите удалить ?`)
+//	if (ques === true) {
+//		alert(`${arr[index]} успешно удален`)
+//		let spl = arr.splice(index, 1);
+//		console.log(spl);
+//	} else {
+//		alert("Массив не изменился")
+//	}
+//}
+
+
+////вторая задача
+//let nameSearch = prompt("Напишите имя которое хотите удалить").trim();
+//if (nameSearch === "") {
+//	alert("Вы ничего не ввели")
+//}else if(!arr.includes(nameSearch[0].toUpperCase() + nameSearch.slice(1).toLowerCase())) {
+//	alert("Нет такого имени в массиве")
+//}else {
+//	nameSearch = nameSearch[0].toUpperCase() + nameSearch.slice(1).toLowerCase()
+//	let searchIdx = arr.indexOf(nameSearch);
+//	let ask = confirm(` ${nameSearch} найден. Хотите удалить из массива ?`)
+//	if (ask === true) {
+//		let del = arr.splice(searchIdx, 1)
+//		alert(`${nameSearch} успешно удален из массива`)
+//		console.log(del);
+//	} else {
+//		alert("Массив не изменился")
+//	}
+//}
+//console.log(arr);
+
+
+////Третья задача
+//let num = [
+//	[
+//		{
+//			a:{
+//				price:20
+//			}
+//		}
+//	],
+//	[
+//		{
+//			a:{
+//				price:44
+//			}
+//		}
+//	],
+//	[
+//		{
+//			a:{
+//				price: 35
+//			}
+//		}
+//	],
+	
+//];
+
+//let total = 0;
+////total = num[0][0].a.price + num[1][0].a.price + num[2][0].a.price
+
+//num.forEach(item => {
+//	total += item[0].a.price
+//})
+//console.log(total);
+
+
+
+//let arr = ["Doniyor", "Sohib", "Farrux", "Samir",]
+
+//let finded = arr.filter((item) => item.length % 2 === 0 )
+//let findedTwo = arr.filter((item) => item.length % 2 !== 0 )
+
+
+//console.log(`четные ${finded}`);
+//console.log(`нечетные ${findedTwo}`);
+
+//let arr = [1,2,3,4,5,6,7];
+//let total = 0
+//let sum = arr.filter((num) => {
+//	total += num
+//});
+
+//console.log(total);
+
+//let arr = [1,2,3,0, '', "hello", null, NaN, undefined,];
+
+//let temp = arr.filter((item) => item);
+//console.log(temp);
