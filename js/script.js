@@ -13,9 +13,8 @@ console.log(max);
 
 let numbers = [2,4,1,4,7,3,2,7,9,3,2]
 let even = [] // четные  
-let odd = [] // не четные
+let odd = [] // не четные``
 numbers.forEach((num) => num % 2 === 0 ? even.push(num) : odd.push(num));
-
 
 console.log(even);
 console.log(odd);
