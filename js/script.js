@@ -1,3 +1,193 @@
+let jobs = [
+	{
+		id: 1,
+		company_name: "raximjon_pepsi",
+		tax: 13,
+		budget: 2_000_000,
+		expensesPerYear: [
+			{
+				title: "furniture",
+				total: 15000
+			},
+			{
+				title: "salary",
+				total: 500_000
+			},
+			{
+				title: "rent",
+				total: 200_000
+			},
+		]
+	},
+	{
+		id: 2,
+		company_name: "amir_fanta_stick",
+		tax: 12,
+		budget: 1_800_000,
+		expensesPerYear: [
+			{
+				title: "furniture",
+				total: 20_000
+			},
+			{
+				title: "salary",
+				total: 700_000
+			},
+			{
+				title: "rent",
+				total: 100_000
+			},
+		]
+	},
+	{
+		id: 3,
+		company_name: "frump_buildings",
+		tax: 14,
+		budget: 3_000_000,
+		expensesPerYear: [
+			{
+				title: "furniture",
+				total: 50_000
+			},
+			{
+				title: "salary",
+				total: 1_200_000
+			},
+			{
+				title: "rent",
+				total: 500_000
+			},
+		]
+	},
+	{
+		id: 4,
+		company_name: "farrux_tube",
+		tax: 12,
+		budget: 10_000_000,
+		expensesPerYear: [
+			{
+				title: "furniture",
+				total: 700_000
+			},
+			{
+				title: "salary",
+				total: 4_000_000
+			},
+			{
+				title: "rent",
+				total: 300_000
+			},
+		]
+	},
+	{
+		id: 5,
+		company_name: "desla",
+		tax: 14,
+		budget: 14_000_000,
+		expensesPerYear: [
+			{
+				title: "furniture",
+				total: 700_000
+			},
+			{
+				title: "salary",
+				total: 3_000_000
+			},
+			{
+				title: "rent",
+				total: 5_000_000
+			},
+		]
+	},
+	{
+		id: 6,
+		company_name: "nosway_u_rustama",
+		tax: 10,
+		budget: 100_000,
+		expensesPerYear: [
+			{
+				title: "furniture",
+				total: 10_000
+			},
+			{
+				title: "salary",
+				total: 0
+			},
+			{
+				title: "rent",
+				total: 0
+			},
+		]
+	},
+	{
+		id: 7,
+		company_name: "vinovodochnaya_u_timura",
+		tax: 21,
+		budget: 1_000_000,
+		expensesPerYear: [
+			{
+				title: "furniture",
+				total: 40_000
+			},
+			{
+				title: "salary",
+				total: 20_000
+			},
+			{
+				title: "rent",
+				total: 30_000
+			},
+		]
+	},
+	{
+		id: 8,
+		company_name: "sokhib_books",
+		tax: 10,
+		budget: 400_000,
+		expensesPerYear: [
+			{
+				title: "furniture",
+				total: 40_000
+			},
+			{
+				title: "salary",
+				total: 12_000
+			},
+			{
+				title: "rent",
+				total: 15_000
+			},
+		]
+	}
+]
+let successfull = ["successfull"]
+let unsuccessfull = ["unsuccessfull"]
+for (let item of jobs) {
+	let total = item.expensesPerYear.reduce((a, b) => a + b.total / 12, 0);
+	item.budgetPerMonth = Math.round(item.budget / 12);
+	item.expensesPerMonth = Math.round(total);
+	item.percent = Math.round(item.expensesPerMonth * 100 / item.budgetPerMonth);
+	item.taxPerMonth = Math.round((item.budgetPerMonth / 100) * (item.tax / 12));
+	item.profitPerMonth = item.budgetPerMonth - (item.taxPerMonth + item.expensesPerMonth)
+	if (item.profitPerMonth > 0) {
+		successfull.push(item);
+	}else {
+		unsuccessfull.push(item);
+	}
+}
+let allTaxes = jobs.reduce((a, b) => a + b.taxPerMonth, 0);
+let maxTax = jobs.reduce((a, b) => a.taxPerMonth > b.taxPerMonth ? a : b);
+let minTax = jobs.reduce((a, b) => a.taxPerMonth < b.taxPerMonth ? a : b);
+let totalSpending = jobs.reduce((a, b) => a + b.expensesPerMonth,0)
+
+console.log(jobs);
+console.log(successfull);
+console.log(unsuccessfull);
+console.log(`Общий налог всех компаний: ${allTaxes}`);
+console.log(maxTax);
+console.log(minTax);
+console.log(`Средний расход всех компаний без учета налога : ${totalSpending / jobs.length }`);
+console.log(`Средний расход всех компаний с налогом : ${(totalSpending + allTaxes) / jobs.length}`);
 
 
 
@@ -14,6 +204,53 @@
 
 
 
+
+
+
+//!-----------------------------------------------------------------
+//let askName = prompt("Your name").trim();
+//let askAge = +prompt("How old a u?");
+
+//askName = askName[0].toUpperCase() + askName.slice(1).toLowerCase()
+
+//console.log(askName);
+
+//if (askName[0] === "u" && askAge >= 18) {
+//	alert("Welcome")
+//}else {
+//	alert("Get out")
+//}
+
+//let name = "John";
+//let admin = name;
+//console.log(admin);
+
+//let balance = 25000;
+
+//let car = 4480;
+//let food = 890;
+//let spending = car + food;
+
+//let invoice = 5500;
+//let stock = 4200;
+//let earings = invoice + stock;
+
+//totalBalance = "Balance: " + ((balance - spending) + earings);
+//console.log(totalBalance);
+
+
+//for(let i = 0; i < 10; i++) {
+//	console.log(i);
+//}
+
+//let ask = prompt("Ваше имя ?");
+//ask = ask[0].toUpperCase() + ask.slice(1).toLowerCase()
+
+//if (ask[0] === "A" || ask[0] === "А"){
+//	alert("Имя подходит");
+//}else {
+//	alert("Имя не подходит");
+//}
 
 
 
@@ -755,6 +992,352 @@
 //console.log(`Mans:${m}, Womans: ${w}` );
 
 //!-----------------------------------------------------------
+
+// Отфильтровать задачи в переменные а и b
+// Сохранить количество в ключе count
+// Сохранить сами задачи в массиве-ключе arr
+//let arr = [
+//	{
+//		"userId": 1,
+//		"id": 1,
+//		"title": "delectus aut au`tem",
+//		"completed": false
+//	},
+//	{
+//		"userId": 1,
+//		"id": 2,
+//		"title": "quis ut nam facilis et officia qui",
+//		"completed": false
+//	},
+//	{
+//		"userId": 1,
+//		"id": 3,
+//		"title": "fugiat veniam minus",
+//		"completed": false
+//	},
+//	{
+//		"userId": 1,
+//		"id": 4,
+//		"title": "et porro tempora",
+//		"completed": true
+//	},
+//	{
+//		"userId": 1,
+//		"id": 5,
+//		"title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+//		"completed": false
+//	},
+//	{
+//		"userId": 1,
+//		"id": 6,
+//		"title": "qui ullam ratione quibusdam voluptatem quia omnis",
+//		"completed": false
+//	},
+//	{
+//		"userId": 1,
+//		"id": 7,
+//		"title": "illo expedita consequatur quia in",
+//		"completed": false
+//	},
+//	{
+//		"userId": 1,
+//		"id": 8,
+//		"title": "quo adipisci enim quam ut ab",
+//		"completed": true
+//	},
+//	{
+//		"userId": 1,
+//		"id": 9,
+//		"title": "molestiae perspiciatis ipsa",
+//		"completed": false
+//	},
+//	{
+//		"userId": 1,
+//		"id": 10,
+//		"title": "illo est ratione doloremque quia maiores aut",
+//		"completed": true
+//	},
+//]
+//let a = {
+//	count: 0,
+//	arr: []
+//}
+
+//let b = {
+//	count: 0,
+//	arr: []
+//}
+
+//arr.forEach(item => {
+//	if(item.completed === true) {
+//		a.count++
+//		a.arr.push(item)
+//	}else {
+//		b.count++
+//		b.arr.push(item)
+//	}
+//})
+//console.log(a);
+//console.log(b);
+
+
+// Раскидать людей в разные массивы в зависимости от их почты
+//let users = [
+//	{
+//		"id": 1,
+//		"name": "Leanne Graham",
+//		"username": "Bret",
+//		"email": "Sincere@april.biz",
+//		"address": {
+//			"street": "Kulas Light",
+//			"suite": "Apt. 556",
+//			"city": "Gwenborough",
+//			"zipcode": "92998-3874",
+//			"geo": {
+//				"lat": "-37.3159",
+//				"lng": "81.1496"
+//			}
+//		},
+//		"phone": "1-770-736-8031 x56442",
+//		"website": "hildegard.org",
+//		"company": {
+//			"name": "Romaguera-Crona",
+//			"catchPhrase": "Multi-layered client-server neural-net",
+//			"bs": "harness real-time e-markets"
+//		}
+//	},
+//	{
+//		"id": 2,
+//		"name": "Ervin Howell",
+//		"username": "Antonette",
+//		"email": "Shanna@melissa.tv",
+//		"address": {
+//			"street": "Victor Plains",
+//			"suite": "Suite 879",
+//			"city": "Wisokyburgh",
+//			"zipcode": "90566-7771",
+//			"geo": {
+//				"lat": "-43.9509",
+//				"lng": "-34.4618"
+//			}
+//		},
+//		"phone": "010-692-6593 x09125",
+//		"website": "anastasia.net",
+//		"company": {
+//			"name": "Deckow-Crist",
+//			"catchPhrase": "Proactive didactic contingency",
+//			"bs": "synergize scalable supply-chains"
+//		}
+//	},
+//	{
+//		"id": 3,
+//		"name": "Clementine Bauch",
+//		"username": "Samantha",
+//		"email": "Nathan@yesenia.net",
+//		"address": {
+//			"street": "Douglas Extension",
+//			"suite": "Suite 847",
+//			"city": "McKenziehaven",
+//			"zipcode": "59590-4157",
+//			"geo": {
+//				"lat": "-68.6102",
+//				"lng": "-47.0653"
+//			}
+//		},
+//		"phone": "1-463-123-4447",
+//		"website": "ramiro.info",
+//		"company": {
+//			"name": "Romaguera-Jacobson",
+//			"catchPhrase": "Face to face bifurcated interface",
+//			"bs": "e-enable strategic applications"
+//		}
+//	},
+//	{
+//		"id": 4,
+//		"name": "Patricia Lebsack",
+//		"username": "Karianne",
+//		"email": "Julianne.OConner@kory.org",
+//		"address": {
+//			"street": "Hoeger Mall",
+//			"suite": "Apt. 692",
+//			"city": "South Elvis",
+//			"zipcode": "53919-4257",
+//			"geo": {
+//				"lat": "29.4572",
+//				"lng": "-164.2990"
+//			}
+//		},
+//		"phone": "493-170-9623 x156",
+//		"website": "kale.biz",
+//		"company": {
+//			"name": "Robel-Corkery",
+//			"catchPhrase": "Multi-tiered zero tolerance productivity",
+//			"bs": "transition cutting-edge web services"
+//		}
+//	},
+//	{
+//		"id": 5,
+//		"name": "Chelsey Dietrich",
+//		"username": "Kamren",
+//		"email": "Lucio_Hettinger@annie.ca",
+//		"address": {
+//			"street": "Skiles Walks",
+//			"suite": "Suite 351",
+//			"city": "Roscoeview",
+//			"zipcode": "33263",
+//			"geo": {
+//				"lat": "-31.8129",
+//				"lng": "62.5342"
+//			}
+//		},
+//		"phone": "(254)954-1289",
+//		"website": "demarco.info",
+//		"company": {
+//			"name": "Keebler LLC",
+//			"catchPhrase": "User-centric fault-tolerant solution",
+//			"bs": "revolutionize end-to-end systems"
+//		}
+//	},
+//	{
+//		"id": 6,
+//		"name": "Mrs. Dennis Schulist",
+//		"username": "Leopoldo_Corkery",
+//		"email": "Karley_Dach@jasper.info",
+//		"address": {
+//			"street": "Norberto Crossing",
+//			"suite": "Apt. 950",
+//			"city": "South Christy",
+//			"zipcode": "23505-1337",
+//			"geo": {
+//				"lat": "-71.4197",
+//				"lng": "71.7478"
+//			}
+//		},
+//		"phone": "1-477-935-8478 x6430",
+//		"website": "ola.org",
+//		"company": {
+//			"name": "Considine-Lockman",
+//			"catchPhrase": "Synchronised bottom-line interface",
+//			"bs": "e-enable innovative applications"
+//		}
+//	},
+//	{
+//		"id": 7,
+//		"name": "Kurtis Weissnat",
+//		"username": "Elwyn.Skiles",
+//		"email": "Telly.Hoeger@billy.biz",
+//		"address": {
+//			"street": "Rex Trail",
+//			"suite": "Suite 280",
+//			"city": "Howemouth",
+//			"zipcode": "58804-1099",
+//			"geo": {
+//				"lat": "24.8918",
+//				"lng": "21.8984"
+//			}
+//		},
+//		"phone": "210.067.6132",
+//		"website": "elvis.io",
+//		"company": {
+//			"name": "Johns Group",
+//			"catchPhrase": "Configurable multimedia task-force",
+//			"bs": "generate enterprise e-tailers"
+//		}
+//	},
+//	{
+//		"id": 8,
+//		"name": "Nicholas Runolfsdottir V",
+//		"username": "Maxime_Nienow",
+//		"email": "Sherwood@rosamond.me",
+//		"address": {
+//			"street": "Ellsworth Summit",
+//			"suite": "Suite 729",
+//			"city": "Aliyaview",
+//			"zipcode": "45169",
+//			"geo": {
+//				"lat": "-14.3990",
+//				"lng": "-120.7677"
+//			}
+//		},
+//		"phone": "586.493.6943 x140",
+//		"website": "jacynthe.com",
+//		"company": {
+//			"name": "Abernathy Group",
+//			"catchPhrase": "Implemented secondary concept",
+//			"bs": "e-enable extensible e-tailers"
+//		}
+//	},
+//	{
+//		"id": 9,
+//		"name": "Glenna Reichert",
+//		"username": "Delphine",
+//		"email": "Chaim_McDermott@dana.io",
+//		"address": {
+//			"street": "Dayna Park",
+//			"suite": "Suite 449",
+//			"city": "Bartholomebury",
+//			"zipcode": "76495-3109",
+//			"geo": {
+//				"lat": "24.6463",
+//				"lng": "-168.8889"
+//			}
+//		},
+//		"phone": "(775)976-6794 x41206",
+//		"website": "conrad.com",
+//		"company": {
+//			"name": "Yost and Sons",
+//			"catchPhrase": "Switchable contextually-based project",
+//			"bs": "aggregate real-time technologies"
+//		}
+//	},
+//	{
+//		"id": 10,
+//		"name": "Clementina DuBuque",
+//		"username": "Moriah.Stanton",
+//		"email": "Rey.Padberg@karina.biz",
+//		"address": {
+//			"street": "Kattie Turnpike",
+//			"suite": "Suite 198",
+//			"city": "Lebsackbury",
+//			"zipcode": "31428-2261",
+//			"geo": {
+//				"lat": "-38.2386",
+//				"lng": "57.2232"
+//			}
+//		},
+//		"phone": "024-648-3804",
+//		"website": "ambrose.net",
+//		"company": {
+//			"name": "Hoeger LLC",
+//			"catchPhrase": "Centralized empowering task-force",
+//			"bs": "target end-to-end models"
+//		}
+//	}
+//]
+//let emails = {
+//	org: [],
+//	net: [],
+//	info: []
+//}
+//let other = []
+
+//users.forEach(item => {
+//	let key = item.email.split(".").at(-1)
+//	if (emails[key]) {
+//		emails[key].push(item)
+//	} else {
+//		other.push(item)
+//	}
+//})
+
+//console.log(emails);
+//console.log(other);
+
+
+
+
+
+
 
 
 
