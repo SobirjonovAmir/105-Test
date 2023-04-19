@@ -1,27 +1,37 @@
-let arr = ['morgen', 'nikolay', 'alexander', 'yulduz', 'timati'];
-let longestName = arr[0]
-let max = arr.sort((a,b) => b.length - a.length)[0]
-
-arr.forEach((name) => {
-	if (longestName > name) {
-		longestName = name
-	}
-})
-console.log(longestName);
-console.log(max);
-
-
-let numbers = [2,4,1,4,7,3,2,7,9,3,2]
-let even = [] // четные  
-let odd = [] // не четные``
-numbers.forEach((num) => num % 2 === 0 ? even.push(num) : odd.push(num));
-
-console.log(even);
-console.log(odd);
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//!-----------------------------------------------------------
 
 //let name = "John";
 //let admin = name;
@@ -54,7 +64,9 @@ console.log(odd);
 //console.log(myName);
 
 
-////Первое задание 
+//!-----------------------------------------------------------
+
+////Первое задание
 //let str = "aaa@bbb@ccc";
 //str = str.split("@").join("!");
 //console.log(str);
@@ -83,6 +95,7 @@ console.log(odd);
 //console.log(findedWord);
 
 
+//!-----------------------------------------------------------
 
 
 ////Задание1
@@ -114,6 +127,9 @@ console.log(odd);
 //}else {
 //	alert("Имя не подходит");
 //}
+
+
+//!-----------------------------------------------------------
 
 ////Первое задание
 //let whichDay = +prompt("Какой день(число) ?");
@@ -153,7 +169,7 @@ console.log(odd);
 //}
 
 
-////Третье задание 
+////Третье задание
 //let askName = prompt("Ваше имя ?");
 
 //if (askName[0] === "A" || askName[0] === "a") {
@@ -181,7 +197,7 @@ console.log(odd);
 //console.log(`${students[5]} ${students[6][0]} ${students[6][1]} ${students[8]} ${students[3]} ${students[9][0][3]} ${students[6][2]} ${students[9][0][1]}`);
 
 
-
+//!-----------------------------------------------------------
 
 
 //let arr = ["Amir", "Farrux", "Sunnat", "Rahim", "Maksim",];
@@ -250,18 +266,17 @@ console.log(odd);
 //			}
 //		}
 //	],
-	
 //];
 
 //let total = 0;
-////total = num[0][0].a.price + num[1][0].a.price + num[2][0].a.price
+//total = num[0][0].a.price + num[1][0].a.price + num[2][0].a.price
 
 //num.forEach(item => {
 //	total += item[0].a.price
 //})
 //console.log(total);
 
-
+//!-----------------------------------------------------------
 
 //let arr = ["Doniyor", "Sohib", "Farrux", "Samir",]
 
@@ -284,3 +299,471 @@ console.log(odd);
 
 //let temp = arr.filter((item) => item);
 //console.log(temp);
+
+
+//!-----------------------------------------------------------
+
+
+//let arr = ['morgen', 'nikolay', 'alexander', 'yulduz', 'timati'];
+//let longestName = arr[0]
+//let max = arr.sort((a,b) => b.length - a.length)[0]
+
+//arr.forEach((name) => {
+//	if (longestName > name) {
+//		longestName = name
+//	}
+//})
+//console.log(longestName);
+//console.log(max);
+
+
+//let numbers = [2,4,1,4,7,3,2,7,9,3,2]
+//let even = [] // четные
+//let odd = [] // не четные``
+//numbers.forEach((num) => num % 2 === 0 ? even.push(num) : odd.push(num));
+
+//console.log(even);
+//console.log(odd);
+
+
+//!-----------------------------------------------------------
+
+
+//let arr = [
+//	{
+//		id: Math.random(),
+//		name: 'Timur',
+//		info: {
+//			school: '235',
+//			faculity: 'SMM'
+//		},
+//	},
+//	{
+//	id: Math.random(),
+//	name: 'Imran',
+//	info: {
+//			school: 'ne izvestno',
+//			faculity: 'programming'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Aminjon',
+//		info: {
+//			school: '444',
+//			faculity: 'Dizayn'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Maxmud',
+//		info: {
+//			school: '777',
+//			faculity: '3dsmax'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Muxammad',
+//		info: {
+//			school: '5555',
+//			faculity: 'Backend'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Timur',
+//		info: {
+//			school: '235',
+//			faculity: 'SMM'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Imran',
+//		info: {
+//			school: 'ne izvestno',
+//			faculity: 'programming'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Aminjon',
+//		info: {
+//			school: '444',
+//			faculity: 'Dizayn'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Maxmud',
+//		info: {
+//			school: '777',
+//			faculity: '3dsmax'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Maxmud',
+//		info: {
+//			school: '777',
+//			faculity: '3dsmax'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Muxammad',
+//		info: {
+//			school: '5555',
+//			faculity: 'Backend'
+//		},
+//	},
+//]
+
+//let categories = [
+//	{
+//		course: ' SMM',
+//		count: 0
+//	},
+//	{
+//		course: 'PROGRAMMING',
+//		count: 0
+//	},
+//	{
+//		course: '     3DSMAX',
+//		count: 0
+//	},
+//	{
+//		course: ' DIZAYN',
+//		count: 0
+//	},
+//	{
+//		course: '   BACKEND',
+//		count: 0
+//	},
+//]
+
+//arr.forEach(item => {
+//	if (item.info.faculity === "SMM") {
+//		categories[0].count += 1
+//	}else if (item.info.faculity === "programming") {
+//		categories[1].count += 1
+//	}else if (item.info.faculity === "3dsmax") {
+//		categories[2].count += 1
+//	}else if (item.info.faculity === "Dizayn") {
+//		categories[3].count += 1
+//	}else if (item.info.faculity === "Backend") {
+//		categories[4].count += 1
+//	}
+//})
+
+//console.log(categories);
+
+
+//!-----------------------------------------------------------
+
+//let courses = [
+//	{
+//		title: 'SMM',
+//		howLong: 3
+//	},
+//	{
+//		title: 'Dev',
+//		howLong: 6
+//	},
+//	{
+//		title: 'Graph',
+//		howLong: 4
+//	},
+//]
+
+//let earnings = {
+//	total: 0,
+//	max: 0,
+//	min: 0
+//}
+
+//let m = 0
+//let w = 0
+//let average_age = 0
+//let smm = 0
+//let dev = 0
+//let graph = 0
+
+//let students = [
+//	{
+//		sex: 'm',
+//		age: 14,
+//		payment: 1220000,
+//		course: {
+//			title: 'SMM',
+//		}
+//	},
+//	{
+//		sex: 'm',
+//		age: 24,
+//		payment: 1883000,
+//		course: {
+//			title: 'Graph'
+//		}
+//	},
+//	{
+//		sex: 'w',
+//		age: 16,
+//		payment: 2190000,
+//		course: {
+//			title: 'Dev'
+//		}
+//	},
+//	{
+//		sex: 'm',
+//		age: 19,
+//		payment: 718000,
+//		course: {
+//			title: 'Graph'
+//		}
+//	},
+//	{
+//		sex: 'w',
+//		age: 15,
+//		payment: 2195000,
+//		course: {
+//			title: 'Dev'
+//		}
+//	},
+//	{
+//		sex: 'm',
+//		age: 24,
+//		payment: 460000,
+//		course: {
+//			title: 'SMM'
+//		}
+//	},
+//	{
+//		sex: 'w',
+//		age: 14,
+//		payment: 560000,
+//		course: {
+//			title: 'SMM'
+//		}
+//	},
+//	{
+//		sex: 'w',
+//		age: 22,
+//		payment: 160000,
+//		course: {
+//			title: 'Dev'
+//		}
+//	},
+//	{
+//		sex: 'm',
+//		age: 26,
+//		payment: 883000,
+//		course: {
+//			title: 'Graph'
+//		}
+//	},
+//	{
+//		sex: 'w',
+//		age: 26,
+//		payment: 750000,
+//		course: {
+//			title: 'Dev'
+//		}
+//	},
+//	{
+//		sex: 'm',
+//		age: 23,
+//		payment: 212000,
+//		course: {
+//			title: 'Graph',
+//		}
+//	},
+//	{
+//		sex: 'w',
+//		age: 24,
+//		payment: 883000,
+//		course: {
+//			title: 'Graph'
+//		}
+//	},
+//	{
+//		sex: 'w',
+//		age: 27,
+//		payment: 190000,
+//		course: {
+//			title: 'Dev'
+//		}
+//	},
+//	{
+//		sex: 'w',
+//		age: 19,
+//		payment: 210000,
+//		course: {
+//			title: 'Graph'
+//		}
+//	},
+//	{
+//		sex: 'w',
+//		age: 21,
+//		payment: 770000,
+//		course: {
+//			title: 'Dev'
+//		}
+//	},
+//	{
+//		sex: 'm',
+//		age: 18,
+//		payment: 1200000,
+//		course: {
+//			title: 'SMM'
+//		}
+//	},
+//	{
+//		sex: 'w',
+//		age: 51,
+//		payment: 880000,
+//		course: {
+//			title: 'SMM'
+//		}
+//	},
+//	{
+//		sex: 'm',
+//		age: 51,
+//		payment: 2430000,
+//		course: {
+//			title: 'Dev'
+//		}
+//	},
+//	{
+//		sex: 'w',
+//		age: 33,
+//		payment: 1277000,
+//		course: {
+//			title: 'Graph'
+//		}
+//	},
+//	{
+//		sex: 'w',
+//		age: 21,
+//		payment: 2750000,
+//		course: {
+//			title: 'Dev'
+//		}
+//	},
+//]
+
+//const setup = (arr) => {
+//	for (let i = 0; i < arr.length; i++) {
+//		if (arr[i].course.title === "SMM") {
+//			arr[i].course.howLong = 3
+//			smm += 1
+//		}else if (arr[i].course.title === "Dev") {
+//			arr[i].course.howLong = 6
+//			dev += 1
+//		}else if (arr[i].course.title === "Graph") {
+//			arr[i].course.howLong = 4
+//			graph += 1
+//		}
+//		if (arr[i].payment > earnings.max) {
+//			earnings.max = arr[i].payment
+//		}else if (arr[i].payment < earnings.min) {
+//			console.log(earnings.min = arr[i].payment);
+//		}
+//	}
+//	arr.forEach(item => item.sex === "m" ? m += 1 : w += 1);
+//	arr.forEach(num => earnings.total += num.payment);
+//	arr.forEach(people => average_age += people.age);
+//	average_age = average_age / arr.length
+//	console.log(`M:${m} W:${w}`);
+//	console.log(`SMM: ${smm}`);
+//	console.log(`Dev: ${dev}`);
+//	console.log(`Graph: ${graph}`);
+//	console.log(`total: ${earnings.total} Max:${earnings.max} Min:${earnings.min}`);
+//	console.log(`average age: ${average_age}`);
+//	console.log(arr);
+//}
+//setup(students)
+
+// В этом примере перед вами учебный центр, в котором учиться несколько студентов. Каждый из них учиться на каком-то курсе и платит за обучение. У студентов мы видим пол, возраст, оплату, а также курс, которые они выбрали.*
+// 1. Добавить студентам ключ howLong внутри ключа course, рядом с title. HowLong - цифра, означающая сколько месяцев длиться курс*
+// 2. Сохранить количество девочек и мальчиков внутри переменных m и w*
+// 3. Сохранить заработок учебного центра в earning.total*
+// 4. Узнать кто больше всех платит за обучение в earning.max*
+// 5. Узнать кто меньше всех платит за обучение в earning.min*
+// 6. Посчитать сколько студентов учиться на курсах внутри dev, smm и graph*
+// 7. Посчитать средний возраст студентов в average_age*
+
+
+
+//!-----------------------------------------------------------
+
+//let students = [
+//	{
+//		name: "Rustam",
+//		age: 15,
+//		gender: 'man'
+//	},
+//	{
+//		name: "Sunnat",
+//		age: 21,
+//		gender: 'man'
+//	},
+//	{
+//		name: "Amir",
+//		age: 20,
+//		gender: 'man'
+//	},
+//	{
+//		name: "Doniyor",
+//		age: 13,
+//		gender: 'man'
+//	},
+//	{
+//		name: "Farrux",
+//		age: 11,
+//		gender: 'man'
+//	},
+//	{
+//		name: "Timur",
+//		age: 18,
+//		gender: 'man'
+//	},
+//	{
+//		name: "Sokhib",
+//		age: 18,
+//		gender: 'man'
+//	},
+//	{
+//		name: "Ibragim",
+//		age: 15,
+//		gender: 'woman'
+//	},
+//	{
+//		name: "Ibragim",
+//		age: 15,
+//		gender: 'woman'
+//	},
+//	{
+//		name: "Raximjon",
+//		age: 18,
+//		gender: 'man'
+//	}
+//]
+//let m = 0, w = 0;
+//students.forEach(item => item.gender === "man" ? m += 1 : w += 1)
+//console.log(`Mans:${m}, Womans: ${w}` );
+
+//!-----------------------------------------------------------
+
+
+
+//!-----------------------------------------------------------
+
+
+
+//!-----------------------------------------------------------
+
+
+
+//!-----------------------------------------------------------
