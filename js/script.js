@@ -1,195 +1,140 @@
-let jobs = [
+//Первая домашка
+let arr = [
 	{
-		id: 1,
-		company_name: "raximjon_pepsi",
-		tax: 13,
-		budget: 2_000_000,
-		expensesPerYear: [
-			{
-				title: "furniture",
-				total: 15000
-			},
-			{
-				title: "salary",
-				total: 500_000
-			},
-			{
-				title: "rent",
-				total: 200_000
-			},
-		]
+		id: Math.random(),
+		name: 'Timur',
+		info: {
+			school: '235',
+			faculity: 'SMM'
+		},
 	},
 	{
-		id: 2,
-		company_name: "amir_fanta_stick",
-		tax: 12,
-		budget: 1_800_000,
-		expensesPerYear: [
-			{
-				title: "furniture",
-				total: 20_000
-			},
-			{
-				title: "salary",
-				total: 700_000
-			},
-			{
-				title: "rent",
-				total: 100_000
-			},
-		]
+		id: Math.random(),
+		name: 'Imran',
+		info: {
+			school: 'ne izvestno',
+			faculity: 'programming'
+		},
 	},
 	{
-		id: 3,
-		company_name: "frump_buildings",
-		tax: 14,
-		budget: 3_000_000,
-		expensesPerYear: [
-			{
-				title: "furniture",
-				total: 50_000
-			},
-			{
-				title: "salary",
-				total: 1_200_000
-			},
-			{
-				title: "rent",
-				total: 500_000
-			},
-		]
+		id: Math.random(),
+		name: 'Aminjon',
+		info: {
+			school: '444',
+			faculity: 'Dizayn'
+		},
 	},
 	{
-		id: 4,
-		company_name: "farrux_tube",
-		tax: 12,
-		budget: 10_000_000,
-		expensesPerYear: [
-			{
-				title: "furniture",
-				total: 700_000
-			},
-			{
-				title: "salary",
-				total: 4_000_000
-			},
-			{
-				title: "rent",
-				total: 300_000
-			},
-		]
+		id: Math.random(),
+		name: 'Maxmud',
+		info: {
+			school: '777',
+			faculity: '3dsmax'
+		},
 	},
 	{
-		id: 5,
-		company_name: "desla",
-		tax: 14,
-		budget: 14_000_000,
-		expensesPerYear: [
-			{
-				title: "furniture",
-				total: 700_000
-			},
-			{
-				title: "salary",
-				total: 3_000_000
-			},
-			{
-				title: "rent",
-				total: 5_000_000
-			},
-		]
+		id: Math.random(),
+		name: 'Muxammad',
+		info: {
+			school: '5555',
+			faculity: 'Backend'
+		},
 	},
 	{
-		id: 6,
-		company_name: "nosway_u_rustama",
-		tax: 10,
-		budget: 100_000,
-		expensesPerYear: [
-			{
-				title: "furniture",
-				total: 10_000
-			},
-			{
-				title: "salary",
-				total: 0
-			},
-			{
-				title: "rent",
-				total: 0
-			},
-		]
+		id: Math.random(),
+		name: 'Timur',
+		info: {
+			school: '235',
+			faculity: 'SMM'
+		},
 	},
 	{
-		id: 7,
-		company_name: "vinovodochnaya_u_timura",
-		tax: 21,
-		budget: 1_000_000,
-		expensesPerYear: [
-			{
-				title: "furniture",
-				total: 40_000
-			},
-			{
-				title: "salary",
-				total: 20_000
-			},
-			{
-				title: "rent",
-				total: 30_000
-			},
-		]
+		id: Math.random(),
+		name: 'Imran',
+		info: {
+			school: 'ne izvestno',
+			faculity: 'programming'
+		},
 	},
 	{
-		id: 8,
-		company_name: "sokhib_books",
-		tax: 10,
-		budget: 400_000,
-		expensesPerYear: [
-			{
-				title: "furniture",
-				total: 40_000
-			},
-			{
-				title: "salary",
-				total: 12_000
-			},
-			{
-				title: "rent",
-				total: 15_000
-			},
-		]
-	}
+		id: Math.random(),
+		name: 'Aminjon',
+		info: {
+			school: '444',
+			faculity: 'Dizayn'
+		},
+	},
+	{
+		id: Math.random(),
+		name: 'Maxmud',
+		info: {
+			school: '777',
+			faculity: '3dsmax'
+		},
+	},
+	{
+		id: Math.random(),
+		name: 'Maxmud',
+		info: {
+			school: '777',
+			faculity: '3dsmax'
+		},
+	},
+	{
+		id: Math.random(),
+		name: 'Muxammad',
+		info: {
+			school: '5555',
+			faculity: 'Backend'
+		},
+	},
 ]
-let successfull = ["successfull"]
-let unsuccessfull = ["unsuccessfull"]
-for (let item of jobs) {
-	let total = item.expensesPerYear.reduce((a, b) => a + b.total / 12, 0);
-	item.budgetPerMonth = Math.round(item.budget / 12);
-	item.expensesPerMonth = Math.round(total);
-	item.percent = Math.round(item.expensesPerMonth * 100 / item.budgetPerMonth);
-	item.taxPerMonth = Math.round((item.budgetPerMonth / 100) * (item.tax / 12));
-	item.profitPerMonth = item.budgetPerMonth - (item.taxPerMonth + item.expensesPerMonth)
-	if (item.profitPerMonth > 0) {
-		successfull.push(item);
-	}else {
-		unsuccessfull.push(item);
+
+let categories = [
+	{
+		course: ' SMM',
+		count: 0
+	},
+	{
+		course: 'PROGRAMMING',
+		count: 0
+	},
+	{
+		course: '     3DSMAX',
+		count: 0
+	},
+	{
+		course: ' DIZAYN',
+		count: 0
+	},
+	{
+		course: '   BACKEND',
+		count: 0
+	},
+]
+
+arr.forEach(item => item.info.faculity = item.info.faculity.toLowerCase().trim());
+categories.forEach(item => item.course = item.course.toLowerCase().trim());
+arr.forEach(person => categories.forEach(item => item.course === person.info.faculity ? item.count++ : item))
+console.log(categories);
+
+
+//Вторая домашка
+for (let i = 5; i >= 0; i--) {
+	for (let k = 0; k <= i; k++) {
+		document.write(" *")
+	}
+	document.write("<br>")
+}
+
+
+//Третья домашка
+for (let i = 2; i <= 9; i++) {
+	document.write(`----------------<br>`)
+	for (let k = 2; k <= 9; k++) {	
+		document.write(`<span >${i} * ${k} = ${i * k}</span> <br> `)
 	}
 }
-let allTaxes = jobs.reduce((a, b) => a + b.taxPerMonth, 0);
-let maxTax = jobs.reduce((a, b) => a.taxPerMonth > b.taxPerMonth ? a : b);
-let minTax = jobs.reduce((a, b) => a.taxPerMonth < b.taxPerMonth ? a : b);
-let totalSpending = jobs.reduce((a, b) => a + b.expensesPerMonth,0)
-
-console.log(jobs);
-console.log(successfull);
-console.log(unsuccessfull);
-console.log(`Общий налог всех компаний: ${allTaxes}`);
-console.log(maxTax);
-console.log(minTax);
-console.log(`Средний расход всех компаний без учета налога : ${totalSpending / jobs.length }`);
-console.log(`Средний расход всех компаний с налогом : ${(totalSpending + allTaxes) / jobs.length}`);
-
-
 
 
 
@@ -566,135 +511,7 @@ console.log(`Средний расход всех компаний с налог
 //!-----------------------------------------------------------
 
 
-//let arr = [
-//	{
-//		id: Math.random(),
-//		name: 'Timur',
-//		info: {
-//			school: '235',
-//			faculity: 'SMM'
-//		},
-//	},
-//	{
-//	id: Math.random(),
-//	name: 'Imran',
-//	info: {
-//			school: 'ne izvestno',
-//			faculity: 'programming'
-//		},
-//	},
-//	{
-//		id: Math.random(),
-//		name: 'Aminjon',
-//		info: {
-//			school: '444',
-//			faculity: 'Dizayn'
-//		},
-//	},
-//	{
-//		id: Math.random(),
-//		name: 'Maxmud',
-//		info: {
-//			school: '777',
-//			faculity: '3dsmax'
-//		},
-//	},
-//	{
-//		id: Math.random(),
-//		name: 'Muxammad',
-//		info: {
-//			school: '5555',
-//			faculity: 'Backend'
-//		},
-//	},
-//	{
-//		id: Math.random(),
-//		name: 'Timur',
-//		info: {
-//			school: '235',
-//			faculity: 'SMM'
-//		},
-//	},
-//	{
-//		id: Math.random(),
-//		name: 'Imran',
-//		info: {
-//			school: 'ne izvestno',
-//			faculity: 'programming'
-//		},
-//	},
-//	{
-//		id: Math.random(),
-//		name: 'Aminjon',
-//		info: {
-//			school: '444',
-//			faculity: 'Dizayn'
-//		},
-//	},
-//	{
-//		id: Math.random(),
-//		name: 'Maxmud',
-//		info: {
-//			school: '777',
-//			faculity: '3dsmax'
-//		},
-//	},
-//	{
-//		id: Math.random(),
-//		name: 'Maxmud',
-//		info: {
-//			school: '777',
-//			faculity: '3dsmax'
-//		},
-//	},
-//	{
-//		id: Math.random(),
-//		name: 'Muxammad',
-//		info: {
-//			school: '5555',
-//			faculity: 'Backend'
-//		},
-//	},
-//]
 
-//let categories = [
-//	{
-//		course: ' SMM',
-//		count: 0
-//	},
-//	{
-//		course: 'PROGRAMMING',
-//		count: 0
-//	},
-//	{
-//		course: '     3DSMAX',
-//		count: 0
-//	},
-//	{
-//		course: ' DIZAYN',
-//		count: 0
-//	},
-//	{
-//		course: '   BACKEND',
-//		count: 0
-//	},
-//]
-
-//arr.forEach(item => {
-//	if (item.info.faculity === "SMM") {
-//		categories[0].count += 1
-//	}else if (item.info.faculity === "programming") {
-//		categories[1].count += 1
-//	}else if (item.info.faculity === "3dsmax") {
-//		categories[2].count += 1
-//	}else if (item.info.faculity === "Dizayn") {
-//		categories[3].count += 1
-//	}else if (item.info.faculity === "Backend") {
-//		categories[4].count += 1
-//	}
-//})
-
-//console.log(categories);
 
 
 //!-----------------------------------------------------------
@@ -1343,7 +1160,192 @@ console.log(`Средний расход всех компаний с налог
 
 //!-----------------------------------------------------------
 
+//let jobs = [
+//	{
+//		id: 1,
+//		company_name: "raximjon_pepsi",
+//		tax: 13,
+//		budget: 2_000_000,
+//		expensesPerYear: [
+//			{
+//				title: "furniture",
+//				total: 15000
+//			},
+//			{
+//				title: "salary",
+//				total: 500_000
+//			},
+//			{
+//				title: "rent",
+//				total: 200_000
+//			},
+//		]
+//	},
+//	{
+//		id: 2,
+//		company_name: "amir_fanta_stick",
+//		tax: 12,
+//		budget: 1_800_000,
+//		expensesPerYear: [
+//			{
+//				title: "furniture",
+//				total: 20_000
+//			},
+//			{
+//				title: "salary",
+//				total: 700_000
+//			},
+//			{
+//				title: "rent",
+//				total: 100_000
+//			},
+//		]
+//	},
+//	{
+//		id: 3,
+//		company_name: "frump_buildings",
+//		tax: 14,
+//		budget: 3_000_000,
+//		expensesPerYear: [
+//			{
+//				title: "furniture",
+//				total: 50_000
+//			},
+//			{
+//				title: "salary",
+//				total: 1_200_000
+//			},
+//			{
+//				title: "rent",
+//				total: 500_000
+//			},
+//		]
+//	},
+//	{
+//		id: 4,
+//		company_name: "farrux_tube",
+//		tax: 12,
+//		budget: 10_000_000,
+//		expensesPerYear: [
+//			{
+//				title: "furniture",
+//				total: 700_000
+//			},
+//			{
+//				title: "salary",
+//				total: 4_000_000
+//			},
+//			{
+//				title: "rent",
+//				total: 300_000
+//			},
+//		]
+//	},
+//	{
+//		id: 5,
+//		company_name: "desla",
+//		tax: 14,
+//		budget: 14_000_000,
+//		expensesPerYear: [
+//			{
+//				title: "furniture",
+//				total: 700_000
+//			},
+//			{
+//				title: "salary",
+//				total: 3_000_000
+//			},
+//			{
+//				title: "rent",
+//				total: 5_000_000
+//			},
+//		]
+//	},
+//	{
+//		id: 6,
+//		company_name: "nosway_u_rustama",
+//		tax: 10,
+//		budget: 100_000,
+//		expensesPerYear: [
+//			{
+//				title: "furniture",
+//				total: 10_000
+//			},
+//			{
+//				title: "salary",
+//				total: 0
+//			},
+//			{
+//				title: "rent",
+//				total: 0
+//			},
+//		]
+//	},
+//	{
+//		id: 7,
+//		company_name: "vinovodochnaya_u_timura",
+//		tax: 21,
+//		budget: 1_000_000,
+//		expensesPerYear: [
+//			{
+//				title: "furniture",
+//				total: 40_000
+//			},
+//			{
+//				title: "salary",
+//				total: 20_000
+//			},
+//			{
+//				title: "rent",
+//				total: 30_000
+//			},
+//		]
+//	},
+//	{
+//		id: 8,
+//		company_name: "sokhib_books",
+//		tax: 10,
+//		budget: 400_000,
+//		expensesPerYear: [
+//			{
+//				title: "furniture",
+//				total: 40_000
+//			},
+//			{
+//				title: "salary",
+//				total: 12_000
+//			},
+//			{
+//				title: "rent",
+//				total: 15_000
+//			},
+//		]
+//	}
+//]
+//let successfull = ["successfull"]
+//let unsuccessfull = ["unsuccessfull"]
+//for (let item of jobs) {
+//	let total = item.expensesPerYear.reduce((a, b) => a + b.total / 12, 0);
+//	item.budgetPerMonth = Math.round(item.budget / 12);
+//	item.expensesPerMonth = Math.round(total);
+//	item.percent = Math.round(item.expensesPerMonth * 100 / item.budgetPerMonth);
+//	item.taxPerMonth = Math.round((item.budgetPerMonth / 100) * (item.tax / 12));
+//	item.profitPerMonth = item.budgetPerMonth - (item.taxPerMonth + item.expensesPerMonth)
+//}
+//jobs.forEach(person => person.profitPerMonth > 0 ? successfull.push(person) : unsuccessfull.push(person));
+//let allTaxes = jobs.reduce((a, b) => a + b.taxPerMonth, 0);
+//let maxTax = jobs.reduce((a, b) => a.taxPerMonth > b.taxPerMonth ? a : b);
+//let minTax = jobs.reduce((a, b) => a.taxPerMonth < b.taxPerMonth ? a : b);
+//let totalSpending = jobs.reduce((a, b) => a + b.expensesPerMonth, 0)
 
+//console.log(jobs);
+//console.log(successfull);
+//console.log(unsuccessfull);
+//console.log(`Общий налог всех компаний: ${allTaxes}`);
+//console.log(maxTax);
+//console.log(minTax);
+//console.log(`Средний расход всех компаний без учета налога : ${totalSpending / jobs.length}`);
+//console.log(`Средний расход всех компаний с налогом : ${(totalSpending + allTaxes) / jobs.length}`);
 
 //!-----------------------------------------------------------
 
