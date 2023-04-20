@@ -1,4 +1,3 @@
-//Первая домашка
 let arr = [
 	{
 		id: Math.random(),
@@ -112,7 +111,7 @@ let categories = [
 		count: 0
 	},
 ]
-
+//Первая домашка
 arr.forEach(item => item.info.faculity = item.info.faculity.toLowerCase().trim());
 categories.forEach(item => item.course = item.course.toLowerCase().trim());
 arr.forEach(person => categories.forEach(item => item.course === person.info.faculity ? item.count++ : item))
