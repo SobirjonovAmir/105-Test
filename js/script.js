@@ -1,139 +1,16 @@
-let arr = [
-	{
-		id: Math.random(),
-		name: 'Timur',
-		info: {
-			school: '235',
-			faculity: 'SMM'
-		},
-	},
-	{
-		id: Math.random(),
-		name: 'Imran',
-		info: {
-			school: 'ne izvestno',
-			faculity: 'programming'
-		},
-	},
-	{
-		id: Math.random(),
-		name: 'Aminjon',
-		info: {
-			school: '444',
-			faculity: 'Dizayn'
-		},
-	},
-	{
-		id: Math.random(),
-		name: 'Maxmud',
-		info: {
-			school: '777',
-			faculity: '3dsmax'
-		},
-	},
-	{
-		id: Math.random(),
-		name: 'Muxammad',
-		info: {
-			school: '5555',
-			faculity: 'Backend'
-		},
-	},
-	{
-		id: Math.random(),
-		name: 'Timur',
-		info: {
-			school: '235',
-			faculity: 'SMM'
-		},
-	},
-	{
-		id: Math.random(),
-		name: 'Imran',
-		info: {
-			school: 'ne izvestno',
-			faculity: 'programming'
-		},
-	},
-	{
-		id: Math.random(),
-		name: 'Aminjon',
-		info: {
-			school: '444',
-			faculity: 'Dizayn'
-		},
-	},
-	{
-		id: Math.random(),
-		name: 'Maxmud',
-		info: {
-			school: '777',
-			faculity: '3dsmax'
-		},
-	},
-	{
-		id: Math.random(),
-		name: 'Maxmud',
-		info: {
-			school: '777',
-			faculity: '3dsmax'
-		},
-	},
-	{
-		id: Math.random(),
-		name: 'Muxammad',
-		info: {
-			school: '5555',
-			faculity: 'Backend'
-		},
-	},
-]
-
-let categories = [
-	{
-		course: ' SMM',
-		count: 0
-	},
-	{
-		course: 'PROGRAMMING',
-		count: 0
-	},
-	{
-		course: '     3DSMAX',
-		count: 0
-	},
-	{
-		course: ' DIZAYN',
-		count: 0
-	},
-	{
-		course: '   BACKEND',
-		count: 0
-	},
-]
-//Первая домашка
-arr.forEach(item => item.info.faculity = item.info.faculity.toLowerCase().trim());
-categories.forEach(item => item.course = item.course.toLowerCase().trim());
-arr.forEach(person => categories.forEach(item => item.course === person.info.faculity ? item.count++ : item))
-console.log(categories);
-
-
-//Вторая домашка
-for (let i = 5; i >= 0; i--) {
-	for (let k = 0; k <= i; k++) {
-		document.write(" *")
-	}
-	document.write("<br>")
+let fib = [0, 1]
+let ask = +prompt("Сколько раз ?")
+for (let i = 0; i < ask; i++) {
+	fib.push(fib[i] + fib[i + 1])
 }
 
+console.log(fib);
 
-//Третья домашка
-for (let i = 2; i <= 9; i++) {
-	document.write(`----------------<br>`)
-	for (let k = 2; k <= 9; k++) {	
-		document.write(`<span >${i} * ${k} = ${i * k}</span> <br> `)
-	}
-}
+
+
+
+
+
 
 
 
@@ -210,7 +87,142 @@ for (let i = 2; i <= 9; i++) {
 
 
 
+//let arr = [
+//	{
+//		id: Math.random(),
+//		name: 'Timur',
+//		info: {
+//			school: '235',
+//			faculity: 'SMM'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Imran',
+//		info: {
+//			school: 'ne izvestno',
+//			faculity: 'programming'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Aminjon',
+//		info: {
+//			school: '444',
+//			faculity: 'Dizayn'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Maxmud',
+//		info: {
+//			school: '777',
+//			faculity: '3dsmax'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Muxammad',
+//		info: {
+//			school: '5555',
+//			faculity: 'Backend'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Timur',
+//		info: {
+//			school: '235',
+//			faculity: 'SMM'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Imran',
+//		info: {
+//			school: 'ne izvestno',
+//			faculity: 'programming'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Aminjon',
+//		info: {
+//			school: '444',
+//			faculity: 'Dizayn'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Maxmud',
+//		info: {
+//			school: '777',
+//			faculity: '3dsmax'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Maxmud',
+//		info: {
+//			school: '777',
+//			faculity: '3dsmax'
+//		},
+//	},
+//	{
+//		id: Math.random(),
+//		name: 'Muxammad',
+//		info: {
+//			school: '5555',
+//			faculity: 'Backend'
+//		},
+//	},
+//]
 
+//let categories = [
+//	{
+//		course: ' SMM',
+//		count: 0
+//	},
+//	{
+//		course: 'PROGRAMMING',
+//		count: 0
+//	},
+//	{
+//		course: '     3DSMAX',
+//		count: 0
+//	},
+//	{
+//		course: ' DIZAYN',
+//		count: 0
+//	},
+//	{
+//		course: '   BACKEND',
+//		count: 0
+//	},
+//]
+////Первая домашка
+//arr.forEach(item => item.info.faculity = item.info.faculity.toLowerCase().trim());
+//categories.forEach(item => item.course = item.course.toLowerCase().trim());
+//arr.forEach(person => categories.forEach(item => item.course === person.info.faculity ? item.count++ : item))
+//console.log(categories);
+
+
+////Вторая домашка
+//for (let i = 5; i >= 0; i--) {
+//	for (let k = 0; k <= i; k++) {
+//		document.write(" *")
+//	}
+//	document.write("<br>")
+//}
+
+
+////Третья домашка
+//for (let i = 2; i <= 9; i++) {
+//	document.write(`----------------<br>`)
+//	for (let k = 2; k <= 9; k++) {
+//		document.write(`<span >${i} * ${k} = ${i * k}</span> <br> `)
+//	}
+//}
 
 //!-----------------------------------------------------------
 
