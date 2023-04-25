@@ -1,10 +1,74 @@
-let fib = [0, 1]
-let ask = +prompt("Сколько раз ?")
-for (let i = 0; i < ask; i++) {
-	fib.push(fib[i] + fib[i + 1])
+function maxName(name1, name2, name3) {
+	var names = [name1, name2, name3];
+	let longest = names.reduce((a, b) => a.length > b.length ? a : b);
+	console.log(longest);
+	//names.sort((a, b) => b.length - a.length)
+	//console.log(names[0]);
 }
 
-console.log(fib);
+maxName("Michael", "George", "Alex")
+
+
+function min(...array) {
+	var nums = [];
+	for (let item of array) {
+		if (typeof item == "number") {
+			nums.push(item)
+		} else if (Array.isArray(item)) {
+			nums.push(...item);
+		} else if (typeof item == "object") {
+			var values = Object.values(item);
+			nums.push(...values);
+		}
+	}
+	return console.log(Math.min(...nums));
+}
+
+min(1, 2);
+min([1, 2]);
+min({ a: 1, b: 2 });
+min({ a: 1, b: 2 }, { a: 11, b: 12 });
+
+
+
+
+
+
+
+let nums = [4, 2, 9, 3, 4, 12, 42, 52, 16, 1, 6, 10, 8, 5, 7]
+
+function sort(array) {
+	for (let i = 0; i < array.length; i++) {
+		for (let k = i + 1; k < array.length; k++) {
+			if (array[i] > array[k]) {
+				let temp = array[i]
+				array[i] = array[k]
+				array[k] = temp
+			}
+		}
+	}
+	return console.log(array);
+	
+}
+sort(nums)
+
+
+
+
+//Сортировка пузырьком
+function bubbleSort(array) {
+	for (let i = 0; i < array.length; i++) {
+		for (let j = 0; j < array.length - i - 1; j++) {
+			if (array[j] > array[j + 1]) {
+				let temp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = temp;
+			}
+		}
+	}
+	return array
+}
+//bubbleSort(nums)
 
 
 
@@ -26,6 +90,29 @@ console.log(fib);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//function howMuch(cars, defect, boolean) {
+//	if (boolean) {
+//		return defect * 100 / cars.toFixed(2)
+//	}else {
+//		return defect * cars / 100;
+//	}
+//};
+
+//howMuch(10042, 14, false)
 
 
 //!-----------------------------------------------------------------
@@ -76,7 +163,13 @@ console.log(fib);
 
 
 
+//let fib = [0, 1]
+//let ask = +prompt("Сколько раз ?")
+//for (let i = 0; i < ask; i++) {
+//	fib.push(fib[i] + fib[i + 1])
+//}
 
+//console.log(fib);
 
 
 
